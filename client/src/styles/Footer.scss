@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+
+  .footer_center {
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+
+      p {
+        margin: 0 10px;
+        font-size: 15px;
+        color: #004369;
+      }
+
+      li {
+        margin: 0 10px;
+        display: inline;
+        font-size: 14px;
+        color: #333;
+      }
+    }
+  }
+
+  .footer_right {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 120px;
+      height: auto;
+    }
+  }
+}

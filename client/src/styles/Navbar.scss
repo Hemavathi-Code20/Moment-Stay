@@ -1,0 +1,169 @@
+@import "./Responsive.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  @include sm {
+    padding: 10px 20px;
+  }
+}
+
+.navbar img {
+  width: 150px;
+  cursor: pointer;
+}
+.host {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+}
+.host:hover {
+  color: #004369;
+}
+
+.navbar_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar_right_account {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid grey;
+  border-radius: 30px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.navbar_right_account img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.navbar_right_accountmenu {
+  position: absolute;
+  right: 42px;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  z-index: 9999;
+  @include sm {
+    right: 20px;
+  }
+}
+
+.navbar_right_accountmenu a {
+  width: 100%;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+
+  &:hover {
+    color: #004369;
+    font-weight: 600;
+  }
+}
+
+.navbar_right img {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar_search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  margin-left: 16%;
+  width: 62%;
+  box-shadow: 0 5px 5px 5px lightgrey;
+  border-radius: 50px;
+  @include xl {
+    padding: 20px;
+    width: 75%;
+  }
+
+  @include lg {
+    width: 75%;
+    padding: 18px;
+  }
+  @include md {
+    width: 75%;
+    padding: 18px;
+  }
+
+  @include sm {
+    width: 75%;
+    padding: 18px;
+  }
+}
+
+.input_group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin-left: 3%;
+}
+
+.input_label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.search_input {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 185px;
+  outline: none;
+  border: none;
+  background-color: #f1f0f0;
+}
+
+.react-datepicker__input-container input {
+  width: 185px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f1f0f0;
+}
+
+.react-datepicker-popper {
+  z-index: 1000;
+}
+
+.checkin_input,
+.checkout_input {
+  flex: 1;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #004369;
+  width: 45px;
+  height: 45px;
+  border-radius: 60px;
+  cursor: pointer;
+  margin-right: 1%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.error-message {
+  color: red;
+}

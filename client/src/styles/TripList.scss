@@ -1,0 +1,89 @@
+@import "./Responsive.scss";
+
+.trip-list-container {
+  min-height: 100vh;
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+  }
+
+  .prev-button {
+    left: 10px;
+  }
+
+  .next-button {
+    right: 10px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    h3 {
+      color: #004369;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+
+  .empty-trip-list {
+    padding: 40px;
+
+    h2 {
+      color: #004369;
+      font-size: 2rem;
+      margin-bottom: 2%;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .trip-btn {
+      margin-top: 3%;
+      background-color: transparent;
+      color: #333;
+      border: 1px solid #333;
+
+      &:hover {
+        box-shadow: 0 5px 5px 0 gray;
+        background-color: transparent;
+      }
+    }
+  }
+}

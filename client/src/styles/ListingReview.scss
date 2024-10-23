@@ -1,0 +1,196 @@
+@import "./Responsive.scss";
+
+.listing-reviews {
+  padding: 40px;
+
+  @include xl {
+    padding: 40px 80px 120px;
+  }
+
+  @include lg {
+    padding: 40px 50px 120px;
+  }
+
+  @include sm {
+    padding: 40px 20px 120px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 35px;
+    color: #004369;
+  }
+  .wishlist-button {
+    padding: 10px;
+    max-width: 150px;
+    width: 135px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: rgb(253, 57, 57);
+    color: whitesmoke;
+    border-radius: 10px;
+    margin-left: 89%;
+    &:hover {
+      box-shadow: 0 10px 10px 0 gray;
+    }
+    @include lg {
+      max-width: 300px;
+    }
+  }
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 3%;
+    margin-top: 5%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 300px;
+      max-height: 180px;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+    }
+  }
+
+  h2 {
+    @include xl {
+      margin-top: 2%;
+      font-size: 10px;
+    }
+  }
+  p {
+    margin-top: 10px;
+    @include xl {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      font-size: 10px;
+    }
+  }
+  .profile {
+    display: flex;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    gap: 20px;
+    align-items: center;
+    h3 {
+      font-size: 16px;
+      @include xl {
+        font-size: 18px;
+      }
+    }
+    img {
+      border-radius: 60%;
+      width: 60px;
+      height: 60px;
+      margin: 0;
+    }
+  }
+  .info {
+    h3 {
+      color: #004369;
+      margin-top: 2%;
+      @include sm {
+        font-size: 20px;
+      }
+      @include xl {
+        font-size: 14px;
+      }
+    }
+    p {
+      max-width: 965px;
+      margin-top: 12px;
+      @include sm {
+        font-size: 20px;
+      }
+      @include xl {
+        font-size: 10px;
+      }
+    }
+  }
+  hr {
+    margin: 20px 0;
+  }
+
+  .amenities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2%;
+    margin-bottom: 10%;
+
+    .facility {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+      width: 200px;
+      height: 50px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 20px;
+
+      .facility_icon {
+        color: #004369;
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+  }
+
+  .feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-bottom: 15px;
+
+      .star {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #ccc;
+
+        &.filled {
+          color: #ffc107;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .button {
+      background-color: #004369;
+      color: whitesmoke;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      &:hover {
+        box-shadow: 0 10px 10px 0 gray;
+      }
+    }
+  }
+}

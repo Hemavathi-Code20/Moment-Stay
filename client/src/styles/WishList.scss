@@ -1,0 +1,32 @@
+@import "./Responsive.scss";
+
+.wish-list-container {
+  min-height: 100vh;
+
+  .empty-wish-list {
+    padding: 40px;
+
+    h2 {
+      color: #004369;
+      font-size: 2rem;
+      margin-bottom: 2%;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .wish-btn {
+      margin-top: 3%;
+      background-color: transparent;
+      color: #333;
+      border: 1px solid #333;
+
+      &:hover {
+        box-shadow: 0 5px 5px 0 gray;
+        background-color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "./Responsive.scss";
+
+.title-list {
+  text-align: center;
+  color: #004369;
+
+  @include sm {
+    margin: 40px 50px;
+  }
+}
+
+.list {
+  padding: 0 100px 120px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+  @include xl {
+    padding: 0 20px 120px;
+  }
+
+  .no-results {
+    padding: 40px;
+    text-align: center;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2%;
+    }
+    @include md {
+      font-size: 16px;
+    }
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
+
+  .btn-go-back {
+    margin-top: 3%;
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+
+    &:hover {
+      box-shadow: 0 5px 5px 0 gray;
+      background-color: transparent;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+}
