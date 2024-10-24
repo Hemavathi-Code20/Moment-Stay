@@ -32,6 +32,7 @@ const ListingDetails = () => {
     try {
       const response = await fetch(
         `https://momentstay.onrender.com/properties/${listingId}`,
+        
         {
           method: "GET",
         }
