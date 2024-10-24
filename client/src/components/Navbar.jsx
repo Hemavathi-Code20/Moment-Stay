@@ -62,7 +62,7 @@ const Navbar = () => {
         <a href="/">
           <img src="/assets/logo.png" alt="logo" />
         </a>
-        <div>cd
+        <div>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </div>
         {isHomePage && (
