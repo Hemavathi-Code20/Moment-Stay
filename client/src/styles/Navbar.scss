@@ -89,23 +89,44 @@
   width: 62%;
   box-shadow: 0 5px 5px 5px lightgrey;
   border-radius: 50px;
+
   @include xl {
     padding: 20px;
     width: 75%;
+
   }
 
   @include lg {
     width: 75%;
     padding: 18px;
   }
+
   @include md {
     width: 75%;
     padding: 18px;
+
+    .checkin_input,
+    .checkout_input {
+      display: none;
+    }
+
+    .search-button {
+      margin-left: 10px;
+    }
   }
 
   @include sm {
     width: 75%;
     padding: 18px;
+
+    .checkin_input,
+    .checkout_input {
+      display: none;
+    }
+
+    .search-button {
+      margin-left: 10px;
+    }
   }
 }
 

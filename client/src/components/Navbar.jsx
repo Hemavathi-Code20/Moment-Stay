@@ -62,18 +62,18 @@ const Navbar = () => {
         <a href="/">
           <img src="/assets/logo.png" alt="logo" />
         </a>
-        <div>
+        <div>cd
           {errorMessage && <p className="error-message">{errorMessage}</p>}
         </div>
         {isHomePage && (
           <div className="navbar_right">
-            {!user ? (
+            {user ? (
               <a href="/create-listing" className="host">
-                Switch To Hosting
+                Switch to Hosting
               </a>
             ) : (
               <a href="/register" className="host">
-                Switch To Hosting
+                 Switch to Hosting
               </a>
             )}
 

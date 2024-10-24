@@ -257,10 +257,10 @@ const UpdateBooking = () => {
                     minDate={new Date()}
                   />
                   <p style={{ fontSize: "17px" }}>
-                    Current Price: ₹{oldTotalPrice}
+                    Old Price: ₹{oldTotalPrice}
                   </p>
                   <p style={{ fontSize: "17px" }}>
-                    Total Price: ₹{newTotalPrice}
+                    New Price: ₹{newTotalPrice}
                   </p>
                   <button onClick={handleUpdate} className="update-button">
                     Update Booking

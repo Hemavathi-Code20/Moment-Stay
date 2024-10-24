@@ -111,7 +111,7 @@ const CreateListing = () => {
                 {" "}
                 <span>Step 1 :</span> Tell us about your place
               </h2>
-              <h3 style={{ position: "absolute", top: "17%" }}>
+              <h3>
                 Which of these categories best describes your place?
               </h3>
               <div className="category-list">
