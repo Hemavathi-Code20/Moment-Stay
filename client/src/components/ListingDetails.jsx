@@ -31,7 +31,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/properties/${listingId}`,
+        `https://momentstay.onrender.com/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -101,7 +101,7 @@ const ListingDetails = () => {
       };
 
       const response = await fetch(
-        "http://localhost:3001/bookings/create",
+        "https://momentstay.onrender.com/bookings/create",
         {
           method: "POST",
           headers: {
@@ -147,7 +147,7 @@ const ListingDetails = () => {
             ...new Set(
               listing?.listingPhotoPaths?.map(
                 (item) =>
-                  `http://localhost:3001/${item.replace(
+                  `https://momentstay.onrender.com/${item.replace(
                     "public",
                     ""
                   )}`
@@ -170,7 +170,7 @@ const ListingDetails = () => {
         {listing?.creator && listing.creator.profileImagePath && (
           <div className="profile">
             <img
-              src={`http://localhost:3001/${listing.creator.profileImagePath.replace(
+              src={`https://momentstay.onrender.com/${listing.creator.profileImagePath.replace(
                 "public",
                 ""
               )}`}

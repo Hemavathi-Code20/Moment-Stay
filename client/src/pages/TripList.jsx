@@ -21,7 +21,7 @@ const TripList = () => {
   const getTripList = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${userId}/trips`,
+        `https://momentstay.onrender.com/users/${userId}/trips`,
         {
           method: "GET",
         }
@@ -125,7 +125,7 @@ const TripList = () => {
                                 (photo, index) => (
                                   <div key={index} className="slide">
                                     <img
-                                      src={`http://localhost:3001/${photo.replace(
+                                      src={`https://momentstay.onrender.com/${photo.replace(
                                         "public",
                                         ""
                                       )}`}

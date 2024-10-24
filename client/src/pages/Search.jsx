@@ -20,7 +20,7 @@ const Search = () => {
   const getSearchListings = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/properties/search/${search}`,
+        `https://momentstay.onrender.com/properties/search/${search}`,
         {
           method: "GET",
         }

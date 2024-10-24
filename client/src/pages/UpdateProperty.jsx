@@ -40,7 +40,7 @@ const UpdateProperty = () => {
     const fetchPropertyDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/properties/${listingId}`
+          `https://momentstay.onrender.com/properties/${listingId}`
         );
         const data = await response.json();
         if (response.ok) {
@@ -117,7 +117,7 @@ const UpdateProperty = () => {
       listingForm.append("price", formDescription.price);
 
       const response = await fetch(
-        `http://localhost:3001/properties/${listingId}`,
+        `https://momentstay.onrender.com/properties/${listingId}`,
         {
           method: "PUT",
           body: listingForm,
@@ -135,7 +135,7 @@ const UpdateProperty = () => {
   const handleDelete = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/properties/${listingId}`,
+        `https://momentstay.onrender.com/properties/${listingId}`,
         {
           method: "DELETE",
         }

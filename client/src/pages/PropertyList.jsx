@@ -19,7 +19,7 @@ const PropertyList = () => {
   const getPropertyList = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${userId}/properties`,
+        `https://momentstay.onrender.com/users/${userId}/properties`,
         {
           method: "GET",
         }

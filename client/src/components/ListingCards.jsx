@@ -36,7 +36,7 @@ const ListingCards = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`http://localhost:3001/${photo?.replace(
+                src={`https://momentstay.onrender.com/${photo?.replace(
                   "public",
                   ""
                 )}`}

@@ -21,7 +21,7 @@ const ReservationList = () => {
   const getReservationList = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${userId}/reservations`,
+        `https://momentstay.onrender.com/users/${userId}/reservations`,
         {
           method: "GET",
         }
@@ -81,7 +81,7 @@ const ReservationList = () => {
   const handleCancelBooking = async (bookingId) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/bookings/delete/${bookingId}`,
+        `https://momentstay.onrender.com/bookings/delete/${bookingId}`,
         {
           method: "DELETE",
         }
@@ -133,7 +133,7 @@ const ReservationList = () => {
                         {listingId.listingPhotoPaths?.map((photo, index) => (
                           <div key={index} className="slide">
                             <img
-                              src={`http://localhost:3001/${photo.replace(
+                              src={`https://momentstay.onrender.com/${photo.replace(
                                 "public",
                                 ""
                               )}`}
