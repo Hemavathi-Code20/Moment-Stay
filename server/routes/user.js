@@ -77,9 +77,10 @@ router.get("/:userId/properties", async (req, res) => {
 router.get("/:userId/reservations", async (req, res) => {
   try {
     const { userId } = req.params;
-    const reservations = await Booking.find({ hostId: userId }).populate(
-      "customerId hostId listingId"
-    );
+    const reservations = await Booking.find({
+      $or: [{ hostId: userId }, { customerId: userId }],
+    }).populate("customerId hostId listingId");
+
     res.status(202).json(reservations);
   } catch (err) {
     console.log(err);
