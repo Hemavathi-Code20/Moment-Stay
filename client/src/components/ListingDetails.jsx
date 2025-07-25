@@ -59,7 +59,7 @@ const ListingDetails = () => {
       alert("Added to wishlist");
     } catch (error) {
       alert(
-        "Something went wrong with adding to your wishlist. Please try again."
+        "Please login to add to wishlist."
       );
     }
   };
@@ -137,17 +137,7 @@ const ListingDetails = () => {
         <div className="title">
           <h1>{listing.title}</h1>
           {!isInWishlist && (
-            <button
-              className="wishlist-button"
-              onClick={() => {
-                if (!user) {
-                  alert("Please login to add to wishlist.");
-                  navigate("/login");
-                  return;
-                }
-                handleAddToWishlist();
-              }}
-            >
+            <button className="wishlist-button" onClick={handleAddToWishlist}>
               Add to Wishlist
             </button>
           )}
@@ -240,20 +230,8 @@ const ListingDetails = () => {
               <p>Start Date: {dateRange[0].startDate.toDateString()}</p>
               <p>End Date: {dateRange[0].endDate.toDateString()}</p>
 
-              <button
-                className="button"
-                type="submit"
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (!user) {
-                    alert("Please login to make a reservation.");
-                    navigate("/login");
-                    return;
-                  }
-                  handleSubmit();
-                }}
-              >
-                Book
+              <button className="button" type="submit" onClick={handleSubmit}>
+                Book Now
               </button>
 
             </div>
