@@ -67,16 +67,6 @@ const Navbar = () => {
         </div>
         {isHomePage && (
           <div className="navbar_right">
-            {user ? (
-              <a href="/create-listing" className="host">
-                Switch to Hosting
-              </a>
-            ) : (
-              <a href="/register" className="host">
-                 Switch to Hosting
-              </a>
-            )}
-
             <button
               className="navbar_right_account"
               onClick={() => setDropdownMenu(!dropdownMenu)}
