@@ -127,7 +127,7 @@ const Navbar = () => {
             <input
               id="search_input"
               type="text"
-              placeholder="beachfront"
+              placeholder="yurt"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={handleKeyDown}
