@@ -12,6 +12,8 @@ import Footer from "./Footer.jsx";
 import "../styles/ListingDetails.scss";
 
 const ListingDetails = () => {
+  const user = useSelector((state) => state.user);
+
   const { listingId } = useParams();
   const [loading, setLoading] = useState(true);
   const [listing, setListing] = useState(null);
@@ -230,9 +232,21 @@ const ListingDetails = () => {
               <p>Start Date: {dateRange[0].startDate.toDateString()}</p>
               <p>End Date: {dateRange[0].endDate.toDateString()}</p>
 
-              <button className="button" type="submit" onClick={handleSubmit}>
+              <button
+                className="button"
+                type="submit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (!user) {
+                    alert("Please login to make a reservation.");
+                    return;
+                  }
+                  handleSubmit();
+                }}
+              >
                 Book Now
               </button>
+
 
             </div>
           </div>
