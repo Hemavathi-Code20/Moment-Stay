@@ -253,7 +253,7 @@ const ListingDetails = () => {
                   handleSubmit();
                 }}
               >
-                Book Now
+                Book
               </button>
 
             </div>
