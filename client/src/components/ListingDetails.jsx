@@ -32,7 +32,7 @@ const ListingDetails = () => {
     try {
       const response = await fetch(
         `https://momentstay.onrender.com/properties/${listingId}`,
-        
+
         {
           method: "GET",
         }
@@ -137,11 +137,22 @@ const ListingDetails = () => {
         <div className="title">
           <h1>{listing.title}</h1>
           {!isInWishlist && (
-            <button className="wishlist-button" onClick={handleAddToWishlist}>
+            <button
+              className="wishlist-button"
+              onClick={() => {
+                if (!user) {
+                  alert("Please login to add to wishlist.");
+                  navigate("/login");
+                  return;
+                }
+                handleAddToWishlist();
+              }}
+            >
               Add to Wishlist
             </button>
           )}
         </div>
+
 
         <div className="photos">
           {[
@@ -229,9 +240,22 @@ const ListingDetails = () => {
               <p>Start Date: {dateRange[0].startDate.toDateString()}</p>
               <p>End Date: {dateRange[0].endDate.toDateString()}</p>
 
-              <button className="button" type="submit" onClick={handleSubmit}>
+              <button
+                className="button"
+                type="submit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (!user) {
+                    alert("Please login to make a reservation.");
+                    navigate("/login");
+                    return;
+                  }
+                  handleSubmit();
+                }}
+              >
                 Book Now
               </button>
+
             </div>
           </div>
         </div>
